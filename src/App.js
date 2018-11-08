@@ -1,28 +1,46 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import 'semantic-ui-css/semantic.min.css'
+import 'semantic-ui-css/semantic.min.css'
+import { Menu, Container, Dropdown, Header } from 'semantic-ui-react'
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+	render() {
+		return (
+			<div className="App">
+				<Menu fixed='top' inverted>
+					<Container>
+						<Menu.Item as='a' header>
+							My Portfolio
+						</Menu.Item>
+						<Menu.Item >test</Menu.Item>
+						<Menu.Item as='a'>test</Menu.Item>
+						<Dropdown.Menu>
+							<Dropdown.Item>front</Dropdown.Item>
+							<Dropdown.Item>back</Dropdown.Item>
 
-export default App;
+						</Dropdown.Menu>
+            <Menu.Item >test</Menu.Item>
+
+            </Container>
+        </Menu>
+					<header className="App-header">
+						<img src={logo} className="App-logo" alt="logo" />
+						<p>
+							Edit <code>src/App.js</code> and save to reload.
+          </p>
+						<a
+							className="App-link"
+							href="https://reactjs.org"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Learn React
+          </a>
+					</header>
+      </div>
+				);
+			  }
+			}
+			
+			export default App;
