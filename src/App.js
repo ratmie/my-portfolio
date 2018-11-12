@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
 import 'semantic-ui-css/semantic.min.css'
-import { Menu, Container, Dropdown, Header } from 'semantic-ui-react'
+import { Menu, Container, Dropdown, Header, Segment, GridRow, Grid, GridColumn, SegmentGroup } from 'semantic-ui-react'
 
 const TopMenu = (props) => (
 	<Menu fixed='top' inverted>
@@ -26,49 +26,81 @@ const TopMenu = (props) => (
 );
 
 const About = props => (
-	<Container text style={{ marginTop: '5em'}}>
-		<Header as='h1'>this is my site</Header>
-		<p>• 組み込みエンジニア
-	2年目
-	• Qiita
-	• Twitter @ratmie1
-	• Mail？
-	• Github @ratmie
-</p>
+	<Container text style={{ paddingTop: '5em'}}>
+		<Header as='h1' inverted>this is my site</Header>
+			<SegmentGroup style={{ textAlign: 'left'}}>
+			<Segment> 組み込みエンジニア 2年目</Segment>
+			<Segment>・<a href='https://qiita.com/ratmie'>Qiita @ratmie</a></Segment>
+			<Segment>・<a href='https://twitter.com/ratmie1'>Twitter @ratmie1</a></Segment>
+			<Segment> ・<a hreaf='https://github.co,/ratmie'>Github @ratmie</a></Segment>
+		</SegmentGroup>
 	</Container>
 );
 
 const Skill = props => (
-	<Container text style={{ marginTop: '5em'}}>
-		<Header as='h1'>this is my site</Header>
-		言語
-	• C++
-		○ 業務のメイン。組み込みLinuxはほぼこれ。ベターC＋OOP的な使い方が多い。
-		C++03環境がメインなのでせねてC++11に移行したい。
-	• C言語
-		○ 業務サブ。マイコンボード開発はこちらが多い。
-	• JavaScript
-		○ GUIのクライアントサイドにて。ポートフォリオ作成にも使用。
-	• C#
-		○ Windows用のツール作成
-	• Python
-		○ 勉強中。競プロ、バックエンド
-	• 英語
-		○ 最低限（最低限ってどこだろう）
-	• 日本
-		○ ネイティブではない半端な関西訛り
+	<Container text style={{ paddingTop: '5em'}}>
+	<Header as='h2' inverted>使えるもの、勉強しているもの。</Header>
+	<Header as='h3'inverted>言語</Header>
+		<GridRow>
+			<Grid>
+				<GridColumn>
+					<Segment.Group style={{ textAlign: 'left'}}>
+						<Segment>
+							<Header as='h'>C++</Header>
+							<p>
+								業務のメイン。組み込みLinuxはほぼこれ。
+								C++03環境がメインなのでせめてC++11に移行したい。
+							</p>
+				</Segment>
+				<Segment>
+			• C言語
+				○ 業務サブ。マイコンボード開発はこちらが多い。
+				</Segment>
+				<Segment>
+			• JavaScript
+				○ GUIのクライアントサイドにて。ポートフォリオ作成にも使用。
+				</Segment>
+				<Segment>
+			• C#
+				○ Windows用のツール作成
+				</Segment>
+				<Segment>
+			• Python
+				○ 勉強中。競プロ、バックエンド
+				</Segment>
+				<Segment>
+			• 英語
+				○ 最低限（最低限ってどこだろう
+				</Segment>
+				<Segment>
+			• 日本
+				○ ネイティブではない半端な関西訛り
+				</Segment>
+				</Segment.Group>
+				</GridColumn>
+				</Grid>
+		</GridRow>
+		<Header as='h3'>Tool/Framework</Header>
 
-Tool/Framework
-	• React
-	• AWS
-Git(Github)
-
+		<GridRow>
+			<Segment.Group>
+				<Segment>
+				• React
+				</Segment>
+				<Segment>
+				• AWS
+				</Segment>
+				<Segment>
+			Git(Github)
+			</Segment>
+			</Segment.Group>
+		</GridRow>
 	</Container>
 );
 
 const Work = props => (
-	<Container text style={{ marginTop: '5em'}}>
-		<Header as='h1'>this is my site</Header>
+	<Container text style={{ paddingTop: '5em'}}>
+		<Header as='h1' inverted>this is my site</Header>
 		<p>Portfolio</p>
 		tessts
 
@@ -94,11 +126,11 @@ class App extends Component {
 		return (
 			<div className="App">
 				<TopMenu onClick={(i) => this.handleClick(i)}/>
-				<Container>
+				<Container className="content">
 					{this.renderContents()}
 				</Container>
 					<header className="App-header">
-						<img src={logo} className="App-logo" alt="logo" />
+						{/* <img src={logo} className="App-logo" alt="logo" />
 						<p>
 							Edit <code>src/App.js</code> and save to reload.
 						</p>
@@ -109,7 +141,7 @@ class App extends Component {
 							//rel="noopener noreferrer"
 						>
 							Learn React
-					</a>
+					</a> */}
 					</header>
 			</div>
 		);
