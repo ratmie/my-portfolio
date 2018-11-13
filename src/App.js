@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
 import 'semantic-ui-css/semantic.min.css'
-import { Menu, Container, Dropdown, Header, Segment, GridRow, Grid, GridColumn, SegmentGroup } from 'semantic-ui-react'
+import { Tansition, Menu, Container, Dropdown, Header, Segment, GridRow, Grid, GridColumn, SegmentGroup, Transition } from 'semantic-ui-react'
 
 const TopMenu = (props) => (
 	<Menu fixed='top' inverted>
@@ -26,6 +26,7 @@ const TopMenu = (props) => (
 );
 
 const About = props => (
+	<Transition transitionOnMount={true} unmountOnHide={true} >
 	<Container text style={{ paddingTop: '5em'}}>
 		<Header as='h1' inverted>this is my site</Header>
 			<SegmentGroup style={{ textAlign: 'left'}}>
@@ -35,9 +36,11 @@ const About = props => (
 			<Segment> ・<a hreaf='https://github.co,/ratmie'>Github @ratmie</a></Segment>
 		</SegmentGroup>
 	</Container>
+	</Transition>
 );
 
 const Skill = props => (
+	<Transition transitionOnMount={true} unmountOnHide={true} >
 	<Container text style={{ paddingTop: '5em'}}>
 	<Header as='h2' inverted>使えるもの、勉強しているもの。</Header>
 	<Header as='h3'inverted>言語</Header>
@@ -96,15 +99,19 @@ const Skill = props => (
 			</Segment.Group>
 		</GridRow>
 	</Container>
+	</Transition>
 );
 
 const Work = props => (
+	<Transition transitionOnMount={true} unmountOnHide={true} >
 	<Container text style={{ paddingTop: '5em'}}>
 		<Header as='h1' inverted>this is my site</Header>
+		<Segment>
 		<p>Portfolio</p>
 		tessts
-
+		</Segment>
 	</Container>
+	</Transition>
 );
 
 class App extends Component {
