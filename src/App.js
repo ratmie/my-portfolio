@@ -18,7 +18,7 @@ const TopMenu = (props) => (
 
 			</Dropdown.Menu>
 		</Dropdown>
-		<Menu.Item onClick={() => props.onClick(Work)}>Work</Menu.Item>
+		<Menu.Item onClick={() => props.onClick(Works)}>Works</Menu.Item>
 
 		</Container>
 	</Menu>
@@ -38,9 +38,9 @@ const About = props => (
 		</SegmentGroup>
 		<Header as='h1' inverted>希望</Header>
 		<SegmentGroup style={{ textAlign: 'left'}}>
-		希望する雇用形態：正社員
-		希望する勤務地：関東、関西
-		希望する年収：400~
+			<Segment>希望する雇用形態：正社員</Segment>
+			<Segment>希望する勤務地：関東、関西</Segment>
+			<Segment>希望する年収：400~</Segment>
 		</SegmentGroup>
 
 	</Container>
@@ -114,7 +114,7 @@ const Skill = props => (
 	</Transition>
 );
 
-const Work = props => (
+const Works = props => (
 	<Transition transitionOnMount={true} unmountOnHide={true} >
 	<Container text style={{ paddingTop: '5em'}}>
 		<Header as='h1' inverted>個人的に作ったもの</Header>
@@ -149,20 +149,6 @@ class App extends Component {
 				<Container className="content">
 					{this.renderContents()}
 				</Container>
-					<header className="App-header">
-						{/* <img src={logo} className="App-logo" alt="logo" />
-						<p>
-							Edit <code>src/App.js</code> and save to reload.
-						</p>
-						<a
-							className="App-link"
-							href="https://reactjs.org"
-							//target="_blank"
-							//rel="noopener noreferrer"
-						>
-							Learn React
-					</a> */}
-					</header>
 			</div>
 		);
 	}
