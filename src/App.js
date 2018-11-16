@@ -27,8 +27,8 @@ const TopMenu = (props) => (
 const About = props => (
 	<Transition transitionOnMount={true} unmountOnHide={true} >
 	<Container text style={{ paddingTop: '5em'}}>
-		<Header as='h1' inverted>this is my site</Header>
-			<SegmentGroup style={{ textAlign: 'left'}}>
+		<Header as='h1' inverted>プロフィール</Header>
+		<SegmentGroup style={{ textAlign: 'left'}}>
 			<Segment> 組み込みエンジニア 2年目</Segment>
 			<Segment>・<a href='https://qiita.com/ratmie'>Qiita @ratmie</a></Segment>
 			<Segment>・<a href='https://twitter.com/ratmie1'>Twitter @ratmie1</a></Segment>
@@ -36,6 +36,13 @@ const About = props => (
 			<Segment><p>趣味：映画鑑賞。10日に1度は映画館に行きたい。</p>
 				<p>漫画：ビースターズとヒロアカが好きです。</p></Segment>
 		</SegmentGroup>
+		<Header as='h1' inverted>希望</Header>
+		<SegmentGroup style={{ textAlign: 'left'}}>
+		希望する雇用形態：正社員
+		希望する勤務地：関東、関西
+		希望する年収：400~
+		</SegmentGroup>
+
 	</Container>
 	</Transition>
 );
@@ -99,6 +106,10 @@ const Skill = props => (
 			</Segment>
 			</Segment.Group>
 		</GridRow>
+		組み込み、マイコンボード、Linux
+		要件定義から一連の経験
+
+		フロント、バックエンド
 	</Container>
 	</Transition>
 );
@@ -106,9 +117,10 @@ const Skill = props => (
 const Work = props => (
 	<Transition transitionOnMount={true} unmountOnHide={true} >
 	<Container text style={{ paddingTop: '5em'}}>
-		<Header as='h1' inverted>this is my site</Header>
+		<Header as='h1' inverted>個人的に作ったもの</Header>
 		<Segment>
 		<p>Portfolio</p>
+		
 		ReactとSemantic UIで実装しています。
 		</Segment>
 	</Container>
