@@ -110,6 +110,7 @@ const Skill = props => (
 		要件定義から一連の経験
 
 		フロント、バックエンド
+		どういう仕事がしたいか
 	</Container>
 	</Transition>
 );
