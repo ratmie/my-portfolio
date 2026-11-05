@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="作曲家・指揮者・ヴァイオリニスト・ピアニストの生涯、名曲の成立、録音技術と世界史を重ねたインタラクティブ年表。">
+  <meta name="theme-color" content="#111a21">
+  <title>音楽家と録音の時代地図 — 1670–2026</title>
+  <style>
+:root{color-scheme:dark;--bg:#101820;--panel:#17232b;--panel2:#1b2932;--line:#2c3b43;--text:#f0f1eb;--muted:#9facb1;--faint:#72818a;--accent:#e7c183;--composer:#a99fe1;--violin:#eeaa84;--piano:#8bc7db;--conductor:#b3cca2;--work:#f0c978;--record:#ffa978;--world:#aec4d4;--tech:#98d2c0;--label:232px;font-family:Inter,-apple-system,BlinkMacSystemFont,'Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);line-height:1.65}button,input{font:inherit}button{cursor:pointer}a{color:var(--accent)}a:hover{text-decoration:none}.site{max-width:1536px;padding:0 34px;margin:auto}.masthead{padding:44px 0 42px}.eyebrow,.kicker{font-size:11px;font-weight:800;letter-spacing:.19em;color:var(--accent)}.eyebrow{display:flex;align-items:center;gap:12px}.signal{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px #e7c18320}.edition{margin-left:auto;color:var(--faint);font-size:10px}.hero{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-top:30px}.intro{margin:0 0 8px;color:var(--muted);font-size:14px;letter-spacing:.03em}h1{font-size:clamp(43px,5.6vw,77px);font-weight:780;line-height:1.16;letter-spacing:-.065em;margin:0}h1 em{font-style:normal;color:var(--accent)}.lead{color:var(--muted);font-size:14px;line-height:2.1;margin:22px 0 0}.hero-numbers{display:flex;gap:32px;padding-bottom:9px}.hero-numbers div{display:flex;flex-direction:column;white-space:nowrap}.hero-numbers strong{font-size:36px;font-weight:660;line-height:1.1;letter-spacing:-.05em}.hero-numbers span{font-size:11px;color:var(--faint);margin-top:9px}.feature-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-top:39px}.feature{display:flex;gap:13px;align-items:center;justify-content:space-between;min-height:68px;padding:12px 18px;border:1px solid #3b4851;border-radius:9px;background:#1a2730;color:var(--text);text-align:left;font-size:12px}.feature:hover{background:#243540;border-color:#987f5d}.feature-year{font-weight:800;color:var(--accent);font-size:20px;font-variant-numeric:tabular-nums}.feature>span:last-child{color:var(--accent)}.explorer,.reading,.source-section{border-top:1px solid var(--line);padding:33px 0 42px}.section-heading{display:flex;gap:20px;align-items:end;justify-content:space-between;margin-bottom:23px}.section-heading h2{font-size:23px;letter-spacing:-.035em;margin:6px 0 0}.section-heading>p{font-size:12px;color:var(--muted);margin:0 0 2px}.toolbar{background:#18242d;border:1px solid #34434c;border-radius:11px;padding:14px 17px;margin-bottom:18px}.role-controls,.toolbar-bottom{display:flex;gap:14px;flex-wrap:wrap;align-items:center}.role-controls{padding-bottom:14px;border-bottom:1px solid #32414a}.toolbar-bottom{padding-top:14px;gap:18px}.role-toggle{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12px;cursor:pointer}.role-toggle input{accent-color:var(--accent)}.role-mark{width:9px;height:9px;border-radius:2px;background:var(--c)}.role-toggle[data-role=composer]{--c:var(--composer)}.role-toggle[data-role=violin]{--c:var(--violin)}.role-toggle[data-role=piano]{--c:var(--piano)}.role-toggle[data-role=conductor]{--c:var(--conductor)}.searchbox{display:flex;align-items:center;gap:8px;border:1px solid #41515a;background:#111b23;border-radius:7px;padding:7px 11px;min-width:250px}.searchbox span{font-size:20px;color:var(--faint);line-height:1}.searchbox input{min-width:180px;background:none;border:0;outline:0;color:var(--text);font-size:12px;width:100%}.searchbox:focus-within{border-color:var(--accent)}.searchbox input::placeholder{color:#7d8b92}.record-check,.zoom-control{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12px}.record-check input{accent-color:var(--accent)}.zoom-control{margin-left:auto;white-space:nowrap}.zoom-control input{width:95px;accent-color:var(--accent)}#zoomNumber{min-width:23px;font-variant-numeric:tabular-nums;color:var(--accent)}.timeline-topline,.timeline-foot{display:flex;justify-content:space-between;align-items:center;gap:15px;color:var(--faint);font-size:11px;padding:3px 1px 12px}.timeline-topline>div:first-child{display:flex;align-items:center;gap:8px}.mini-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-left:8px}.work-dot{background:var(--work)}.rec-dot{border:2px solid var(--record)}.life-bar-sample{background:var(--composer);width:25px;height:7px;border-radius:5px;margin-left:8px}.timeline-scroller{position:relative;overflow:auto;max-height:72vh;min-height:300px;border:1px solid #42515a;border-radius:10px;background:#111d25;scrollbar-color:#78858c #1c2a32}.timeline-scroller:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.timeline-root{position:relative}.timeline-axis{display:flex;height:55px;position:sticky;top:0;z-index:12;border-bottom:1px solid #52616a;background:#1d2d36}.axis-left{width:var(--label);min-width:var(--label);position:sticky;left:0;z-index:14;background:#1d2d36;display:flex;align-items:center;padding:0 19px;font-size:11px;color:var(--muted);letter-spacing:.07em;border-right:1px solid #4a5b65}.axis-track{position:relative;height:100%}.axis-tick{position:absolute;top:13px;border-left:1px solid #465862;height:40px;padding-left:8px;color:#b4c0c2;font-size:12px;font-weight:680;font-variant-numeric:tabular-nums}.axis-tick.century{color:var(--accent);border-color:var(--accent)}.lane{display:flex;min-height:75px;border-bottom:1px solid #354650}.lane-label{position:sticky;left:0;z-index:6;width:var(--label);min-width:var(--label);background:#1c2b34;padding:12px 18px;border-right:1px solid #40505a;display:flex;flex-direction:column;justify-content:center}.lane-label strong{font-size:12px}.lane-label small{font-size:10px;color:#91a3ab}.lane-track{position:relative;min-height:75px;background-image:linear-gradient(to right,#ffffff0a 1px,transparent 1px);background-repeat:repeat-x}.lane.event-tech .lane-label{border-left:3px solid var(--tech)}.lane.event-world .lane-label{border-left:3px solid var(--world)}.lane.event-record .lane-label{border-left:3px solid var(--record)}.event-button{position:absolute;display:block;border:0;background:transparent;color:inherit;padding:0;z-index:2}.event-pin{position:absolute;bottom:0;left:0;height:16px;border-left:1px solid var(--pin);transform:translateX(-.5px)}.event-pin::after{content:'';position:absolute;left:-4px;bottom:-3px;width:8px;height:8px;border-radius:50%;background:var(--pin);box-shadow:0 0 0 3px #101820}.event-title{position:absolute;white-space:nowrap;left:5px;bottom:13px;font-size:10px;line-height:1.25;background:#192a33df;color:#c7d3d5;max-width:170px;overflow:hidden;text-overflow:ellipsis;padding:2px 4px;border-radius:2px;text-align:left}.event-button:hover,.event-button:focus-visible{z-index:9}.event-button:hover .event-title,.event-button:focus-visible .event-title{color:white;background:#324654}.person-group{display:flex;position:relative;height:34px;background:#25343d;border-bottom:1px solid #43525b}.person-group .group-title{position:sticky;z-index:7;left:0;width:var(--label);min-width:var(--label);display:flex;align-items:center;gap:9px;background:#283741;padding-left:17px;font-size:10px;letter-spacing:.1em;color:#d9e0df}.person-group .group-track{height:100%;background:linear-gradient(90deg,#25343d,#1a2932);width:100%}.group-badge{width:8px;height:8px;background:var(--bar);border-radius:50%}.timeline-row{display:flex;min-height:39px;position:relative}.person-label{position:sticky;left:0;z-index:5;width:var(--label);min-width:var(--label);display:flex;align-items:center;gap:10px;padding:0 14px 0 19px;background:#18252e;border-right:1px solid #344650;border-bottom:1px solid #2c3d47;overflow:hidden}.person-label-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;color:#d9e2e2}.person-label-name span{display:block;color:#82949b;font-size:9px;line-height:1}.person-label button{border:0;background:transparent;text-align:left;color:inherit;cursor:pointer;padding:4px 0;overflow:hidden;flex:1}.person-label button:hover .person-label-name{text-decoration:underline}.record-status{flex-shrink:0;font-size:10px;line-height:1;color:var(--accent);border:1px solid #8c7956;border-radius:3px;padding:3px 4px}.record-status.roll{color:#9fbac6;border-color:#576b77}.record-status.voice{color:#c3b1a0;border-color:#66554c}.row-track{height:39px;position:relative;border-bottom:1px solid #23343f;background-image:linear-gradient(to right,#ffffff0a 1px,transparent 1px);background-repeat:repeat-x}.timeline-row:nth-child(even) .row-track{background-color:#17242c}.timeline-row:hover .row-track,.timeline-row:hover .person-label{background-color:#22323b}.person-bar{position:absolute;top:16px;height:7px;background:var(--bar);border:0;border-radius:3px;opacity:.67;cursor:pointer;min-width:3px}.person-bar:hover,.person-bar:focus-visible{opacity:1;outline:2px solid #ffffffb3;outline-offset:2px}.life-birth,.life-death{position:absolute;height:15px;width:1px;background:var(--bar);top:12px;opacity:.5;pointer-events:none}.work-marker,.record-marker{position:absolute;z-index:3;top:12px;width:15px;height:15px;transform:translateX(-50%);border:0;border-radius:50%;background:var(--work);box-shadow:0 0 0 2px #17242c;cursor:pointer}.work-marker:hover,.work-marker:focus-visible{outline:2px solid white;outline-offset:2px;z-index:8}.record-marker{width:14px;height:14px;border:3px solid var(--record);background:#16252d}.row-track .work-marker:nth-of-type(even){top:16px}.timeline-foot{padding-top:15px}.jump-years{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.jump-years button{color:#c4d3d5;border:1px solid #45565f;background:#1b2a33;border-radius:4px;padding:3px 9px;font-size:11px}.jump-years button:hover{border-color:var(--accent);color:var(--accent)}.reading-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.reading-grid article{background:#19262e;border:1px solid var(--line);padding:22px;border-radius:8px}.reading-grid .index{color:var(--accent);font-size:11px;letter-spacing:.15em}.reading-grid h3{font-size:17px;margin:6px 0 6px}.reading-grid p,.source-intro{font-size:12px;color:var(--muted);line-height:2;margin:0}.source-intro{max-width:860px;margin-bottom:24px}.sources-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 22px}.sources-list a{display:block;font-size:11px;color:#c8d8db;text-decoration:none;padding:9px 0;border-bottom:1px solid var(--line)}.sources-list a:hover{color:var(--accent)}.sources-list a:after{content:' ↗';color:var(--accent)}footer{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:18px 0 42px;font-size:11px;color:var(--faint)}.detail-dialog{position:fixed;width:min(520px,calc(100% - 28px));border:1px solid #637079;border-radius:12px;background:#1b2b34;color:var(--text);box-shadow:0 20px 80px #0009;padding:27px;max-height:min(85vh,780px);overflow:auto}.detail-dialog::backdrop{background:#02070bba;backdrop-filter:blur(3px)}.detail-dialog form{position:absolute;right:13px;top:11px}.dialog-close{border:1px solid #54636a;background:#263943;color:#e9eeee;border-radius:50%;font-size:23px;line-height:1;width:32px;height:32px}.detail-kicker{font-size:11px;letter-spacing:.11em;color:var(--accent);font-weight:750}.detail-dialog h2{font-size:27px;line-height:1.3;letter-spacing:-.025em;margin:12px 30px 8px 0}.detail-years{font-size:13px;color:#9bafb9;margin:0 0 18px}.detail-dialog p{color:#c6d2d3;font-size:13px;line-height:1.9}.detail-dialog .detail-citation{margin-top:22px;padding-top:16px;border-top:1px solid #50606a;font-size:12px}.detail-citation a{display:block;margin:8px 0;word-break:break-word}.detail-list{padding-left:20px;font-size:12px;line-height:1.9;color:#cad7d7}.detail-list button{border:0;background:none;color:var(--accent);text-align:left;padding:3px;cursor:pointer;text-decoration:underline}@media(max-width:900px){.site{padding:0 20px}.hero-numbers{gap:15px}.hero-numbers strong{font-size:26px}.feature-links{gap:8px}.feature{padding:11px;font-size:11px;flex-wrap:wrap;gap:5px}.toolbar-bottom{gap:11px}.zoom-control{margin-left:0}.sources-list{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){:root{--label:158px}.site{padding:0 13px}.masthead{padding-top:25px}.hero{display:block;margin-top:24px}h1{font-size:44px}.intro{font-size:12px}.lead{font-size:12px;line-height:1.85}.hero-numbers{justify-content:flex-start;gap:30px;margin-top:24px}.feature-links{grid-template-columns:1fr;margin-top:25px}.feature{min-height:47px;flex-wrap:nowrap;padding:7px 12px;font-size:12px}.feature-year{font-size:17px}.section-heading{display:block}.section-heading h2{font-size:20px}.section-heading>p{margin-top:8px}.toolbar{padding:12px}.role-controls{gap:10px 14px}.searchbox{width:100%;min-width:unset}.searchbox input{min-width:0}.zoom-control{width:100%}.timeline-topline{flex-wrap:wrap;gap:4px}.timeline-scroller{max-height:68vh}.person-label{padding-left:10px;gap:4px}.person-label-name{font-size:11px}.person-label-name span{font-size:8px}.record-status{font-size:8px;padding:2px}.reading-grid,.sources-list{grid-template-columns:1fr}.reading-grid article{padding:17px}.timeline-foot{display:block}.jump-years{margin-top:9px}footer{display:block}.detail-dialog{padding:22px}.detail-dialog h2{font-size:22px}}
+
+</style>
+</head>
+<body>
+  <div class="site">
+    <header class="masthead">
+      <div class="eyebrow"><span class="signal"></span> MUSIC HISTORY · RECORDING ATLAS <span class="edition">2026 EDITION</span></div>
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="intro">ブラームスの声が、かろうじて残っている。</p>
+          <h1>音楽家と録音の<br><em>時代地図。</em></h1>
+          <p class="lead">作品が生まれた年と、作曲家や名演奏家が生きた時代。<br>そこに世界史と録音技術の進歩を重ねると、音楽史が少し違って見えてきます。</p>
+        </div>
+        <div class="hero-numbers" aria-label="掲載件数">
+          <div><strong id="personCount">—</strong><span>音楽家</span></div>
+          <div><strong id="workCount">—</strong><span>代表作品</span></div>
+          <div><strong id="eventCount">—</strong><span>歴史上の節目</span></div>
+        </div>
+      </div>
+      <div class="feature-links" aria-label="注目の録音">
+        <button type="button" class="feature" data-feature="1889"><span class="feature-year">1889</span><span>ブラームス、蝋管に残る</span><span aria-hidden="true">↗</span></button>
+        <button type="button" class="feature" data-feature="1903"><span class="feature-year">1903</span><span>ヨアヒム、5面の録音</span><span aria-hidden="true">↗</span></button>
+        <button type="button" class="feature" data-feature="1928"><span class="feature-year">1928</span><span>クライスラー × ラフマニノフ</span><span aria-hidden="true">↗</span></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="explorer" aria-labelledby="explorerTitle">
+        <div class="section-heading"><div><span class="kicker">01 / EXPLORE</span><h2 id="explorerTitle">年表を探る</h2></div><p>点を押すと、作品・録音・歴史上の出来事の詳細を表示します。</p></div>
+        <div class="toolbar">
+          <div class="role-controls" id="roleControls" aria-label="人物分類の絞り込み">
+            <label class="role-toggle" data-role="composer"><input type="checkbox" value="composer" checked><span class="role-mark"></span>作曲家</label>
+            <label class="role-toggle" data-role="violin"><input type="checkbox" value="violin" checked><span class="role-mark"></span>ヴァイオリン</label>
+            <label class="role-toggle" data-role="piano"><input type="checkbox" value="piano" checked><span class="role-mark"></span>ピアノ</label>
+            <label class="role-toggle" data-role="conductor"><input type="checkbox" value="conductor" checked><span class="role-mark"></span>指揮者</label>
+          </div>
+          <div class="toolbar-bottom">
+            <label class="searchbox"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="人物名・作品名で検索" aria-label="人物名または作品名で検索"></label>
+            <label class="record-check"><input type="checkbox" id="recordedOnly"> 録音・ピアノロールが残る人物のみ</label>
+            <label class="zoom-control">拡大 <input type="range" id="zoomRange" min="4" max="15" value="8" step="1" aria-label="年表の拡大率"><span id="zoomNumber">8×</span></label>
+          </div>
+        </div>
+        <div class="timeline-topline"><div><span class="mini-dot work-dot"></span>代表作品 <span class="mini-dot rec-dot"></span>録音の節目 <span class="life-bar-sample"></span>生存期間</div><div class="scroll-hint">⇆ 横スクロールできます</div></div>
+        <div id="timelineScroller" class="timeline-scroller" tabindex="0" aria-label="1670年から2026年の音楽史年表。左右にスクロールできます">
+          <div id="timelineRoot" class="timeline-root" aria-live="polite"></div>
+        </div>
+        <div class="timeline-foot">
+          <span id="visibleCount" aria-live="polite"></span>
+          <div class="jump-years"><span>この時代へ</span><button data-jump="1780">1780</button><button data-jump="1850">1850</button><button data-jump="1900">1900</button><button data-jump="1950">1950</button></div>
+        </div>
+      </section>
+
+      <section class="reading" aria-labelledby="readTitle">
+        <div class="section-heading"><div><span class="kicker">02 / HOW TO READ</span><h2 id="readTitle">録音「あり」は、同じ意味ではありません。</h2></div></div>
+        <div class="reading-grid">
+          <article><span class="index">01</span><h3>音声録音</h3><p>マイク以前は録音ホーン、1925年以降は電気録音が広がりました。ブラームスの蝋管はこれに該当しますが、著しく劣化しています。</p></article>
+          <article><span class="index">02</span><h3>ピアノロール</h3><p>鍵盤操作などを機械で再現する媒体。マーラーのロールは重要な手がかりですが、本人の音色を録音したものではありません。</p></article>
+          <article><span class="index">03</span><h3>初演・完成・出版</h3><p>作品の年は一つに決まりません。点を押すと「作曲」「完成」「初演」「出版」のどの年なのかを確認できます。</p></article>
+        </div>
+      </section>
+
+      <section class="source-section" aria-labelledby="sourcesTitle">
+        <div class="section-heading"><div><span class="kicker">03 / SOURCES & NOTES</span><h2 id="sourcesTitle">典拠と使い方</h2></div></div>
+        <p class="source-intro">これは音楽史の全件データベースではなく、年代感をつかむための選択的な地図です。録音の「初年」は確認できた一部にのみ表示し、残る音源の網羅性は保証しません。存命の人物の右端は2026年で表示しています。生没年や作品年の詳細は継続的な検証対象です。</p>
+        <div id="sourcesList" class="sources-list"></div>
+      </section>
+    </main>
+    <footer><span>音楽家と録音の時代地図</span><span>Static HTML · Vanilla JS · No tracking</span></footer>
+  </div>
+  <dialog id="detailDialog" class="detail-dialog" aria-labelledby="detailTitle">
+    <form method="dialog"><button class="dialog-close" aria-label="閉じる" type="submit">×</button></form>
+    <div id="detailBody"></div>
+  </dialog>
+  <script>
+window.TIMELINE_DATA = {
+  "meta": {
+    "title": "音楽家と録音の時代地図",
+    "start": 1670,
+    "end": 2026,
+    "updated": "2026-11-05",
+    "scope": "選択的な概観。代表作の年は「完成・初演・出版」を必ず併記。録音の初年は確認できた一部のみ。"
+  },
+  "sources": [
+    {
+      "id": "loc",
+      "title": "米国議会図書館｜録音技術史年表",
+      "url": "https://www.loc.gov/programs/national-recording-preservation-plan/tools-and-resources/historical-background/timeline/"
+    },
+    {
+      "id": "nps",
+      "title": "米国国立公園局｜ヴァンゲマンの1889–90年録音",
+      "url": "https://home.nps.gov/edis/learn/photosmultimedia/theo-wangemann-1889-1890-european-recordings.htm"
+    },
+    {
+      "id": "iasa",
+      "title": "国際音声・視聴覚アーカイブ協会｜ブラームス蝋管録音の資料",
+      "url": "https://www.iasa-web.org/sites/default/files/bulletin/iasa-phonographic-bulletin-39.pdf"
+    },
+    {
+      "id": "joachim",
+      "title": "Joseph Joachim Research｜1903年録音の曲目",
+      "url": "https://josephjoachim.com/2026/01/22/about-joachims-recordings/"
+    },
+    {
+      "id": "nii",
+      "title": "CiNii｜ヨアヒム、サラサーテ、イザイの録音復刻",
+      "url": "https://ci.nii.ac.jp/ncid/BA82491101"
+    },
+    {
+      "id": "naxos",
+      "title": "Naxos Historical｜クライスラーとラフマニノフ（1928）",
+      "url": "https://www.naxos.com/catalogue/item.asp?item_code=8.110968"
+    },
+    {
+      "id": "cuny",
+      "title": "CUNY Pressbooks｜音楽史と社会史の年表",
+      "url": "https://pressbooks.cuny.edu/understandingmusicbmcc/chapter/introduction-and-historical-context/"
+    },
+    {
+      "id": "ever",
+      "title": "Ever-When｜クラシック音楽の年表",
+      "url": "https://ever-when.com/t/classical-music"
+    },
+    {
+      "id": "smith",
+      "title": "スミソニアン｜蓄音機の登場",
+      "url": "https://americanhistory.si.edu/explore/exhibitions/hear-my-voice/online/replaying-sound"
+    },
+    {
+      "id": "meng",
+      "title": "Mahler Foundation｜メンゲルベルクと1922年の録音",
+      "url": "https://www.mahlerfoundation.org/mahler/contemporaries/willem-mengelberg/"
+    },
+    {
+      "id": "npsorig",
+      "title": "米国国立公園局｜録音の起源",
+      "url": "https://www.nps.gov/edis/learn/historyculture/origins-of-sound-recording.htm"
+    },
+    {
+      "id": "tchaik",
+      "title": "Tchaikovsky Research｜1890年の声の蝋管録音",
+      "url": "https://en.tchaikovsky-research.net/pages/Endorsement_of_Thomas_Edison%27s_%22Phonograph%22"
+    },
+    {
+      "id": "grieg",
+      "title": "メリーランド大学図書館｜グリーグの1903年録音",
+      "url": "https://lib.guides.umd.edu/ipam-buyers-guide/E-K"
+    },
+    {
+      "id": "earlySym",
+      "title": "Journal of the American Musicological Society｜1911–13年の交響曲全曲録音",
+      "url": "https://doi.org/10.1525/jams.2023.76.1.113"
+    },
+    {
+      "id": "history",
+      "title": "Encyclopaedia Britannica｜歴史百科事典",
+      "url": "https://www.britannica.com/"
+    },
+    {
+      "id": "music",
+      "title": "New Grove/Oxford Music（参照用）",
+      "url": "https://www.oxfordmusiconline.com/"
+    }
+  ],
+  "people": [
+    {
+      "id": "viv",
+      "name": "ヴィヴァルディ",
+      "latin": "Antonio Vivaldi",
+      "start": 1678,
+      "end": 1741,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "bach",
+      "name": "J.S.バッハ",
+      "latin": "Johann Sebastian Bach",
+      "start": 1685,
+      "end": 1750,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "handel",
+      "name": "ヘンデル",
+      "latin": "George Frideric Handel",
+      "start": 1685,
+      "end": 1759,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "haydn",
+      "name": "ハイドン",
+      "latin": "Joseph Haydn",
+      "start": 1732,
+      "end": 1809,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "mozart",
+      "name": "モーツァルト",
+      "latin": "Wolfgang A. Mozart",
+      "start": 1756,
+      "end": 1791,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "beethoven",
+      "name": "ベートーヴェン",
+      "latin": "Ludwig van Beethoven",
+      "start": 1770,
+      "end": 1827,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "schubert",
+      "name": "シューベルト",
+      "latin": "Franz Schubert",
+      "start": 1797,
+      "end": 1828,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "berlioz",
+      "name": "ベルリオーズ",
+      "latin": "Hector Berlioz",
+      "start": 1803,
+      "end": 1869,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "mendelssohn",
+      "name": "メンデルスゾーン",
+      "latin": "Felix Mendelssohn",
+      "start": 1809,
+      "end": 1847,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "chopin",
+      "name": "ショパン",
+      "latin": "Frédéric Chopin",
+      "start": 1810,
+      "end": 1849,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "schumann",
+      "name": "シューマン",
+      "latin": "Robert Schumann",
+      "start": 1810,
+      "end": 1856,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "liszt",
+      "name": "リスト",
+      "latin": "Franz Liszt",
+      "start": 1811,
+      "end": 1886,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "wagner",
+      "name": "ワーグナー",
+      "latin": "Richard Wagner",
+      "start": 1813,
+      "end": 1883,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "verdi",
+      "name": "ヴェルディ",
+      "latin": "Giuseppe Verdi",
+      "start": 1813,
+      "end": 1901,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "smetana",
+      "name": "スメタナ",
+      "latin": "Bedřich Smetana",
+      "start": 1824,
+      "end": 1884,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "bruckner",
+      "name": "ブルックナー",
+      "latin": "Anton Bruckner",
+      "start": 1824,
+      "end": 1896,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "brahms",
+      "name": "ブラームス",
+      "latin": "Johannes Brahms",
+      "start": 1833,
+      "end": 1897,
+      "role": "composer",
+      "recording": "audio",
+      "recordingYear": 1889,
+      "note": "損傷の激しい蝋管に、自作《ハンガリー舞曲第1番》を弾く姿と声が残ります。",
+      "living": false
+    },
+    {
+      "id": "saintsaens",
+      "name": "サン＝サーンス",
+      "latin": "Camille Saint-Saëns",
+      "start": 1835,
+      "end": 1921,
+      "role": "composer",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "自身のピアノ演奏の録音が残ります。",
+      "living": false
+    },
+    {
+      "id": "tchaikovsky",
+      "name": "チャイコフスキー",
+      "latin": "Pyotr I. Tchaikovsky",
+      "start": 1840,
+      "end": 1893,
+      "role": "composer",
+      "recording": "voice",
+      "recordingYear": 1890,
+      "note": "1890年、同時代の音楽家と交わした会話の声が蝋管に残っています。本人の演奏録音ではありません。",
+      "living": false
+    },
+    {
+      "id": "dvorak",
+      "name": "ドヴォルザーク",
+      "latin": "Antonín Dvořák",
+      "start": 1841,
+      "end": 1904,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "grieg",
+      "name": "グリーグ",
+      "latin": "Edvard Grieg",
+      "start": 1843,
+      "end": 1907,
+      "role": "composer",
+      "recording": "audio",
+      "recordingYear": 1903,
+      "note": "1903年に本人が弾いたピアノの短い録音が知られます。",
+      "living": false
+    },
+    {
+      "id": "mahler",
+      "name": "マーラー",
+      "latin": "Gustav Mahler",
+      "start": 1860,
+      "end": 1911,
+      "role": "composer",
+      "recording": "roll",
+      "recordingYear": 1905,
+      "note": "自作を弾いたピアノロールが残りますが、音声を録音したものではありません。",
+      "living": false
+    },
+    {
+      "id": "debussy",
+      "name": "ドビュッシー",
+      "latin": "Claude Debussy",
+      "start": 1862,
+      "end": 1918,
+      "role": "composer",
+      "recording": "roll",
+      "recordingYear": 1913,
+      "note": "本人のピアノ演奏を再現するロールが残ります。録音技法の限界に注意。",
+      "living": false
+    },
+    {
+      "id": "strauss",
+      "name": "R.シュトラウス",
+      "latin": "Richard Strauss",
+      "start": 1864,
+      "end": 1949,
+      "role": "composer",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "自作を指揮した音声録音が残ります。",
+      "living": false
+    },
+    {
+      "id": "sibelius",
+      "name": "シベリウス",
+      "latin": "Jean Sibelius",
+      "start": 1865,
+      "end": 1957,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "rach",
+      "name": "ラフマニノフ",
+      "latin": "Sergei Rachmaninoff",
+      "start": 1873,
+      "end": 1943,
+      "role": "composer",
+      "recording": "audio",
+      "recordingYear": 1919,
+      "note": "自身のピアノ演奏を数多く録音。1928年にはクライスラーと共演。",
+      "living": false
+    },
+    {
+      "id": "schoenberg",
+      "name": "シェーンベルク",
+      "latin": "Arnold Schoenberg",
+      "start": 1874,
+      "end": 1951,
+      "role": "composer",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "本人が指揮・話す音源が残ります。",
+      "living": false
+    },
+    {
+      "id": "ravel",
+      "name": "ラヴェル",
+      "latin": "Maurice Ravel",
+      "start": 1875,
+      "end": 1937,
+      "role": "composer",
+      "recording": "roll",
+      "recordingYear": null,
+      "note": "本人名義のピアノロールが残りますが、再現精度の解釈には注意が必要です。",
+      "living": false
+    },
+    {
+      "id": "bartok",
+      "name": "バルトーク",
+      "latin": "Béla Bartók",
+      "start": 1881,
+      "end": 1945,
+      "role": "composer",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "自身のピアノ演奏を録音しています。",
+      "living": false
+    },
+    {
+      "id": "stravinsky",
+      "name": "ストラヴィンスキー",
+      "latin": "Igor Stravinsky",
+      "start": 1882,
+      "end": 1971,
+      "role": "composer",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "自作を指揮した録音が多数残ります。",
+      "living": false
+    },
+    {
+      "id": "prokofiev",
+      "name": "プロコフィエフ",
+      "latin": "Sergei Prokofiev",
+      "start": 1891,
+      "end": 1953,
+      "role": "composer",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "自作のピアノ演奏が残っています。",
+      "living": false
+    },
+    {
+      "id": "gershwin",
+      "name": "ガーシュウィン",
+      "latin": "George Gershwin",
+      "start": 1898,
+      "end": 1937,
+      "role": "composer",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "自作を弾く録音・ピアノロールが残ります。",
+      "living": false
+    },
+    {
+      "id": "shostakovich",
+      "name": "ショスタコーヴィチ",
+      "latin": "Dmitri Shostakovich",
+      "start": 1906,
+      "end": 1975,
+      "role": "composer",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "自身のピアノ演奏の録音が残ります。",
+      "living": false
+    },
+    {
+      "id": "messiaen",
+      "name": "メシアン",
+      "latin": "Olivier Messiaen",
+      "start": 1908,
+      "end": 1992,
+      "role": "composer",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "オルガンなど自身の演奏録音が残ります。",
+      "living": false
+    },
+    {
+      "id": "britten",
+      "name": "ブリテン",
+      "latin": "Benjamin Britten",
+      "start": 1913,
+      "end": 1976,
+      "role": "composer",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "自作の指揮やピアノ伴奏の録音が残ります。",
+      "living": false
+    },
+    {
+      "id": "takemitsu",
+      "name": "武満徹",
+      "latin": "Tōru Takemitsu",
+      "start": 1930,
+      "end": 1996,
+      "role": "composer",
+      "recording": "none",
+      "recordingYear": null,
+      "note": "",
+      "living": false
+    },
+    {
+      "id": "joachim",
+      "name": "ヨアヒム",
+      "latin": "Joseph Joachim",
+      "start": 1831,
+      "end": 1907,
+      "role": "violin",
+      "recording": "audio",
+      "recordingYear": 1903,
+      "note": "バッハとブラームスの曲など5面を1903年に録音。",
+      "living": false
+    },
+    {
+      "id": "sarasate",
+      "name": "サラサーテ",
+      "latin": "Pablo de Sarasate",
+      "start": 1844,
+      "end": 1908,
+      "role": "violin",
+      "recording": "audio",
+      "recordingYear": 1904,
+      "note": "1904年の本人のヴァイオリン演奏が残ります。",
+      "living": false
+    },
+    {
+      "id": "ysaye",
+      "name": "イザイ",
+      "latin": "Eugène Ysaÿe",
+      "start": 1858,
+      "end": 1931,
+      "role": "violin",
+      "recording": "audio",
+      "recordingYear": 1912,
+      "note": "本人の演奏がSP盤に残ります。",
+      "living": false
+    },
+    {
+      "id": "kreisler",
+      "name": "クライスラー",
+      "latin": "Fritz Kreisler",
+      "start": 1875,
+      "end": 1962,
+      "role": "violin",
+      "recording": "audio",
+      "recordingYear": 1909,
+      "note": "膨大な録音が残るヴァイオリニスト。1928年ラフマニノフと共演。",
+      "living": false
+    },
+    {
+      "id": "thibaud",
+      "name": "ティボー",
+      "latin": "Jacques Thibaud",
+      "start": 1880,
+      "end": 1953,
+      "role": "violin",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "戦前の歴史的録音が残ります。",
+      "living": false
+    },
+    {
+      "id": "szigeti",
+      "name": "シゲティ",
+      "latin": "Joseph Szigeti",
+      "start": 1892,
+      "end": 1973,
+      "role": "violin",
+      "recording": "audio",
+      "recordingYear": 1908,
+      "note": "20世紀の初めから録音が残る名手。",
+      "living": false
+    },
+    {
+      "id": "heifetz",
+      "name": "ハイフェッツ",
+      "latin": "Jascha Heifetz",
+      "start": 1901,
+      "end": 1987,
+      "role": "violin",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "SPからLP、映像まで残ります。",
+      "living": false
+    },
+    {
+      "id": "oistrakh",
+      "name": "オイストラフ",
+      "latin": "David Oistrakh",
+      "start": 1908,
+      "end": 1974,
+      "role": "violin",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "戦中・戦後の録音や映像が残ります。",
+      "living": false
+    },
+    {
+      "id": "menuhin",
+      "name": "メニューイン",
+      "latin": "Yehudi Menuhin",
+      "start": 1916,
+      "end": 1999,
+      "role": "violin",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "少年時代から録音が残ります。",
+      "living": false
+    },
+    {
+      "id": "grumiaux",
+      "name": "グリュミオー",
+      "latin": "Arthur Grumiaux",
+      "start": 1921,
+      "end": 1986,
+      "role": "violin",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "戦後LP時代の録音で知られます。",
+      "living": false
+    },
+    {
+      "id": "suk",
+      "name": "ヨゼフ・スーク",
+      "latin": "Josef Suk",
+      "start": 1929,
+      "end": 2011,
+      "role": "violin",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "多数のステレオ録音が残ります。",
+      "living": false
+    },
+    {
+      "id": "perlman",
+      "name": "パールマン",
+      "latin": "Itzhak Perlman",
+      "start": 1945,
+      "end": 2026,
+      "role": "violin",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "LP・CD・映像など多くの録音が残ります。終期は表示上の現在年です。",
+      "living": true
+    },
+    {
+      "id": "mullova",
+      "name": "ムローヴァ",
+      "latin": "Viktoria Mullova",
+      "start": 1959,
+      "end": 2026,
+      "role": "violin",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "現役。終期は表示上の現在年です。",
+      "living": true
+    },
+    {
+      "id": "nikisch",
+      "name": "ニキシュ",
+      "latin": "Arthur Nikisch",
+      "start": 1855,
+      "end": 1922,
+      "role": "conductor",
+      "recording": "audio",
+      "recordingYear": 1913,
+      "note": "ベルリン・フィルとの1913年ベートーヴェン《交響曲第5番》で知られます。",
+      "living": false
+    },
+    {
+      "id": "toscanini",
+      "name": "トスカニーニ",
+      "latin": "Arturo Toscanini",
+      "start": 1867,
+      "end": 1957,
+      "role": "conductor",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "NBC交響楽団などとの録音が多数残ります。",
+      "living": false
+    },
+    {
+      "id": "mengelberg",
+      "name": "メンゲルベルク",
+      "latin": "Willem Mengelberg",
+      "start": 1871,
+      "end": 1951,
+      "role": "conductor",
+      "recording": "audio",
+      "recordingYear": 1922,
+      "note": "1922年にニューヨーク・フィルとの録音。",
+      "living": false
+    },
+    {
+      "id": "walter",
+      "name": "ブルーノ・ワルター",
+      "latin": "Bruno Walter",
+      "start": 1876,
+      "end": 1962,
+      "role": "conductor",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "SPからステレオLPに及ぶ録音が残ります。",
+      "living": false
+    },
+    {
+      "id": "stokowski",
+      "name": "ストコフスキー",
+      "latin": "Leopold Stokowski",
+      "start": 1882,
+      "end": 1977,
+      "role": "conductor",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "録音技術の発展にも積極的だった指揮者。",
+      "living": false
+    },
+    {
+      "id": "klemperer",
+      "name": "クレンペラー",
+      "latin": "Otto Klemperer",
+      "start": 1885,
+      "end": 1973,
+      "role": "conductor",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "LP時代の録音が広く知られます。",
+      "living": false
+    },
+    {
+      "id": "furt",
+      "name": "フルトヴェングラー",
+      "latin": "Wilhelm Furtwängler",
+      "start": 1886,
+      "end": 1954,
+      "role": "conductor",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "戦前・戦中・戦後のライヴとスタジオ録音が残ります。",
+      "living": false
+    },
+    {
+      "id": "karajan",
+      "name": "カラヤン",
+      "latin": "Herbert von Karajan",
+      "start": 1908,
+      "end": 1989,
+      "role": "conductor",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "モノラル、ステレオ、デジタル、映像の各時代にまたがります。",
+      "living": false
+    },
+    {
+      "id": "bernstein",
+      "name": "バーンスタイン",
+      "latin": "Leonard Bernstein",
+      "start": 1918,
+      "end": 1990,
+      "role": "conductor",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "作曲・指揮・教育番組の音源と映像が豊富です。",
+      "living": false
+    },
+    {
+      "id": "abbado",
+      "name": "アバド",
+      "latin": "Claudio Abbado",
+      "start": 1933,
+      "end": 2014,
+      "role": "conductor",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "デジタル時代まで録音・映像があります。",
+      "living": false
+    },
+    {
+      "id": "kleiber",
+      "name": "カルロス・クライバー",
+      "latin": "Carlos Kleiber",
+      "start": 1930,
+      "end": 2004,
+      "role": "conductor",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "数は少ないものの著名な録音・映像が残ります。",
+      "living": false
+    },
+    {
+      "id": "paderewski",
+      "name": "パデレフスキ",
+      "latin": "Ignacy J. Paderewski",
+      "start": 1860,
+      "end": 1941,
+      "role": "piano",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "初期のピアノ録音の重要人物。",
+      "living": false
+    },
+    {
+      "id": "cortot",
+      "name": "コルトー",
+      "latin": "Alfred Cortot",
+      "start": 1877,
+      "end": 1962,
+      "role": "piano",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "戦前・戦後の録音が多数残ります。",
+      "living": false
+    },
+    {
+      "id": "schnabel",
+      "name": "シュナーベル",
+      "latin": "Artur Schnabel",
+      "start": 1882,
+      "end": 1951,
+      "role": "piano",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "1930年代のベートーヴェン・ソナタ全集で著名。",
+      "living": false
+    },
+    {
+      "id": "rubinstein",
+      "name": "ルービンシュタイン",
+      "latin": "Arthur Rubinstein",
+      "start": 1887,
+      "end": 1982,
+      "role": "piano",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "SP・LP・ステレオ期をまたぐ長い録音歴。",
+      "living": false
+    },
+    {
+      "id": "horowitz",
+      "name": "ホロヴィッツ",
+      "latin": "Vladimir Horowitz",
+      "start": 1903,
+      "end": 1989,
+      "role": "piano",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "戦前から晩年のデジタル録音まで残ります。",
+      "living": false
+    },
+    {
+      "id": "arrau",
+      "name": "アラウ",
+      "latin": "Claudio Arrau",
+      "start": 1903,
+      "end": 1991,
+      "role": "piano",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "SP・LP・CD時代にわたる多数の録音。",
+      "living": false
+    },
+    {
+      "id": "richter",
+      "name": "リヒテル",
+      "latin": "Sviatoslav Richter",
+      "start": 1915,
+      "end": 1997,
+      "role": "piano",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "ライヴ・スタジオ録音が大量に残ります。",
+      "living": false
+    },
+    {
+      "id": "gould",
+      "name": "グールド",
+      "latin": "Glenn Gould",
+      "start": 1932,
+      "end": 1982,
+      "role": "piano",
+      "recording": "audio",
+      "recordingYear": null,
+      "note": "1955年と1981年の《ゴルトベルク変奏曲》など。",
+      "living": false
+    },
+    {
+      "id": "argerich",
+      "name": "アルゲリッチ",
+      "latin": "Martha Argerich",
+      "start": 1941,
+      "end": 2026,
+      "role": "piano",
+      "recording": "audio",
+      "recordingYear": null,      "note": "現役。終期は表示上の現在年です。",
+      "living": true
+    }
+  ],
+  "works": [
+    {
+      "year": 1721,
+      "title": "ブランデンブルク協奏曲集",
+      "person": "bach",
+      "kind": "献呈",
+      "note": "6曲をまとめて献呈",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1722,
+      "title": "平均律クラヴィーア曲集 第1巻",
+      "person": "bach",
+      "kind": "完成",
+      "note": "24の長短調による作品集",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1725,
+      "title": "《四季》",
+      "person": "viv",
+      "kind": "出版",
+      "note": "作品8『和声と創意への試み』の一部として出版",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1727,
+      "title": "《マタイ受難曲》",
+      "person": "bach",
+      "kind": "初演",
+      "note": "1727年初演説に基づく（年代に諸説あり）",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1741,
+      "title": "《ゴルトベルク変奏曲》",
+      "person": "bach",
+      "kind": "出版",
+      "note": "初版刊行年",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1742,
+      "title": "《メサイア》",
+      "person": "handel",
+      "kind": "初演",
+      "note": "ダブリンで初演",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1786,
+      "title": "《フィガロの結婚》",
+      "person": "mozart",
+      "kind": "初演",
+      "note": "ウィーンで初演",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1787,
+      "title": "《ドン・ジョヴァンニ》",
+      "person": "mozart",
+      "kind": "初演",
+      "note": "プラハで初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1791,
+      "title": "《魔笛》",
+      "person": "mozart",
+      "kind": "初演",
+      "note": "ウィーンで初演",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1791,
+      "title": "《レクイエム》",
+      "person": "mozart",
+      "kind": "未完",
+      "note": "未完のまま没",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1804,
+      "title": "交響曲第3番《英雄》",
+      "person": "beethoven",
+      "kind": "完成",
+      "note": "最初の公開演奏は1805年",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1806,
+      "title": "ヴァイオリン協奏曲",
+      "person": "beethoven",
+      "kind": "初演",
+      "note": "ウィーンで初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1808,
+      "title": "交響曲第5番《運命》",
+      "person": "beethoven",
+      "kind": "初演",
+      "note": "ウィーンで第6番などとともに初演",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1815,
+      "title": "《魔王》",
+      "person": "schubert",
+      "kind": "作曲",
+      "note": "歌曲の代表作",
+      "sources": [
+        "cuny"
+      ]
+    },
+    {
+      "year": 1824,
+      "title": "交響曲第9番《合唱》",
+      "person": "beethoven",
+      "kind": "初演",
+      "note": "ウィーンで初演",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1826,
+      "title": "《夏の夜の夢》序曲",
+      "person": "mendelssohn",
+      "kind": "完成",
+      "note": "17歳で完成",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1827,
+      "title": "《冬の旅》",
+      "person": "schubert",
+      "kind": "作曲",
+      "note": "連作歌曲",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1828,
+      "title": "弦楽五重奏曲 D956",
+      "person": "schubert",
+      "kind": "作曲",
+      "note": "晩年の室内楽曲",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1830,
+      "title": "《幻想交響曲》",
+      "person": "berlioz",
+      "kind": "初演",
+      "note": "パリで初演",
+      "sources": [
+        "cuny"
+      ]
+    },
+    {
+      "year": 1835,
+      "title": "バラード第1番",
+      "person": "chopin",
+      "kind": "完成頃",
+      "note": "1831–35年頃に作曲",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1842,
+      "title": "ポロネーズ《英雄》",
+      "person": "chopin",
+      "kind": "作曲",
+      "note": "変イ長調 Op.53",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1845,
+      "title": "ヴァイオリン協奏曲 ホ短調",
+      "person": "mendelssohn",
+      "kind": "初演",
+      "note": "ライプツィヒで初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1845,
+      "title": "ピアノ協奏曲",
+      "person": "schumann",
+      "kind": "初演",
+      "note": "作品54",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1853,
+      "title": "ピアノ・ソナタ ロ短調",
+      "person": "liszt",
+      "kind": "完成",
+      "note": "単一楽章の大作",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1853,
+      "title": "《椿姫》",
+      "person": "verdi",
+      "kind": "初演",
+      "note": "ヴェネツィアで初演",
+      "sources": [
+        "cuny"
+      ]
+    },
+    {
+      "year": 1865,
+      "title": "《トリスタンとイゾルデ》",
+      "person": "wagner",
+      "kind": "初演",
+      "note": "ミュンヘンで初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1868,
+      "title": "ピアノ協奏曲",
+      "person": "grieg",
+      "kind": "作曲",
+      "note": "イ短調 Op.16",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1874,
+      "title": "《モルダウ》",
+      "person": "smetana",
+      "kind": "作曲",
+      "note": "連作交響詩《わが祖国》の一曲",
+      "sources": [
+        "cuny"
+      ]
+    },
+    {
+      "year": 1876,
+      "title": "交響曲第1番",
+      "person": "brahms",
+      "kind": "初演",
+      "note": "20年以上の構想を経て完成",
+      "sources": [
+        "cuny"
+      ]
+    },
+    {
+      "year": 1876,
+      "title": "《ニーベルングの指環》全曲",
+      "person": "wagner",
+      "kind": "初演",
+      "note": "バイロイト祝祭劇場で全曲初演",
+      "sources": [
+        "cuny"
+      ]
+    },
+    {
+      "year": 1877,
+      "title": "《白鳥の湖》",
+      "person": "tchaikovsky",
+      "kind": "初演",
+      "note": "モスクワで初演",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1878,
+      "title": "ヴァイオリン協奏曲",
+      "person": "brahms",
+      "kind": "作曲",
+      "note": "初演は1879年、独奏はヨアヒム",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1878,
+      "title": "ヴァイオリン協奏曲",
+      "person": "tchaikovsky",
+      "kind": "作曲",
+      "note": "初演は1881年",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1881,
+      "title": "ピアノ協奏曲第2番",
+      "person": "brahms",
+      "kind": "初演",
+      "note": "変ロ長調 Op.83",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1884,
+      "title": "交響曲第7番",
+      "person": "bruckner",
+      "kind": "初演",
+      "note": "成功を収めた代表作",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1885,
+      "title": "交響曲第4番",
+      "person": "brahms",
+      "kind": "初演",
+      "note": "ホ短調 Op.98",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1887,
+      "title": "《ロマンティックな小品》",
+      "person": "dvorak",
+      "kind": "作曲",
+      "note": "ヴァイオリンとピアノのためのOp.75",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1888,
+      "title": "《ペール・ギュント》第1組曲",
+      "person": "grieg",
+      "kind": "出版",
+      "note": "劇付随音楽から編曲",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1889,
+      "title": "交響曲第1番《巨人》",
+      "person": "mahler",
+      "kind": "初演",
+      "note": "初演時の形は後の稿と異なる",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1892,
+      "title": "《くるみ割り人形》",
+      "person": "tchaikovsky",
+      "kind": "初演",
+      "note": "サンクトペテルブルクで初演",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1893,
+      "title": "交響曲第6番《悲愴》",
+      "person": "tchaikovsky",
+      "kind": "初演",
+      "note": "自身が初演を指揮",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1893,
+      "title": "交響曲第9番《新世界より》",
+      "person": "dvorak",
+      "kind": "初演",
+      "note": "ニューヨークで初演",
+      "sources": [
+        "cuny"
+      ]
+    },
+    {
+      "year": 1893,
+      "title": "弦楽四重奏曲",
+      "person": "debussy",
+      "kind": "完成",
+      "note": "ト短調 Op.10",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1894,
+      "title": "《牧神の午後への前奏曲》",
+      "person": "debussy",
+      "kind": "初演",
+      "note": "パリで初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1895,
+      "title": "チェロ協奏曲",
+      "person": "dvorak",
+      "kind": "作曲",
+      "note": "ロ短調 Op.104",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1895,
+      "title": "交響曲第2番《復活》",
+      "person": "mahler",
+      "kind": "初演",
+      "note": "全曲初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1901,
+      "title": "ピアノ協奏曲第2番",
+      "person": "rach",
+      "kind": "初演",
+      "note": "嬰ハ短調 Op.18",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1902,
+      "title": "交響曲第2番",
+      "person": "sibelius",
+      "kind": "初演",
+      "note": "ヘルシンキで初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1903,
+      "title": "弦楽四重奏曲",
+      "person": "ravel",
+      "kind": "完成",
+      "note": "ヘ長調",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1905,
+      "title": "《海》",
+      "person": "debussy",
+      "kind": "初演",
+      "note": "3つの交響的素描",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1905,
+      "title": "ヴァイオリン協奏曲（改訂版）",
+      "person": "sibelius",
+      "kind": "初演",
+      "note": "1904年初稿から改訂",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1908,
+      "title": "交響曲第2番",
+      "person": "rach",
+      "kind": "初演",
+      "note": "ホ短調 Op.27",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1908,
+      "title": "《大地の歌》",
+      "person": "mahler",
+      "kind": "完成",
+      "note": "初演はマーラー没後の1911年",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1910,
+      "title": "《火の鳥》",
+      "person": "stravinsky",
+      "kind": "初演",
+      "note": "パリで初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1911,
+      "title": "《ペトルーシュカ》",
+      "person": "stravinsky",
+      "kind": "初演",
+      "note": "パリで初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1912,
+      "title": "《ダフニスとクロエ》",
+      "person": "ravel",
+      "kind": "初演",
+      "note": "バレエ音楽",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1912,
+      "title": "《月に憑かれたピエロ》",
+      "person": "schoenberg",
+      "kind": "初演",
+      "note": "シュプレヒシュティンメを用いる",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1913,
+      "title": "《春の祭典》",
+      "person": "stravinsky",
+      "kind": "初演",
+      "note": "パリでの初演が話題に",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1918,
+      "title": "《古典交響曲》",
+      "person": "prokofiev",
+      "kind": "初演",
+      "note": "交響曲第1番",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1923,
+      "title": "ピアノ組曲 Op.25",
+      "person": "schoenberg",
+      "kind": "完成",
+      "note": "十二音技法による初期の代表作",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1924,
+      "title": "《ラプソディ・イン・ブルー》",
+      "person": "gershwin",
+      "kind": "初演",
+      "note": "ニューヨークで初演",
+      "sources": [
+        "ever"
+      ]
+    },
+    {
+      "year": 1928,
+      "title": "《ボレロ》",
+      "person": "ravel",
+      "kind": "初演",
+      "note": "パリで初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1934,
+      "title": "《パガニーニの主題による狂詩曲》",
+      "person": "rach",
+      "kind": "初演",
+      "note": "自作のピアノ独奏で初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1936,
+      "title": "《ピーターと狼》",
+      "person": "prokofiev",
+      "kind": "初演",
+      "note": "子どものための交響的物語",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1937,
+      "title": "交響曲第5番",
+      "person": "shostakovich",
+      "kind": "初演",
+      "note": "レニングラードで初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1942,
+      "title": "交響曲第7番《レニングラード》",
+      "person": "shostakovich",
+      "kind": "初演",
+      "note": "第二次世界大戦期の作品",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1944,
+      "title": "《管弦楽のための協奏曲》",
+      "person": "bartok",
+      "kind": "初演",
+      "note": "米国で初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1949,
+      "title": "《トゥーランガリラ交響曲》",
+      "person": "messiaen",
+      "kind": "初演",
+      "note": "ボストンで初演",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1962,
+      "title": "《戦争レクイエム》",
+      "person": "britten",
+      "kind": "初演",
+      "note": "コヴェントリー大聖堂献堂のため",
+      "sources": [
+        "music"
+      ]
+    },
+    {
+      "year": 1967,
+      "title": "《ノヴェンバー・ステップス》",
+      "person": "takemitsu",
+      "kind": "初演",
+      "note": "琵琶・尺八とオーケストラ",
+      "sources": [
+        "music"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "year": 1789,
+      "title": "フランス革命",
+      "group": "world",
+      "note": "旧体制を大きく揺るがす政治変動",
+      "sources": [
+        "history"
+      ]
+    },
+    {
+      "year": 1815,
+      "title": "ウィーン会議",
+      "group": "world",
+      "note": "ナポレオン戦争後の欧州秩序を再編",
+      "sources": [
+        "cuny"
+      ]
+    },
+    {
+      "year": 1848,
+      "title": "ヨーロッパ諸国の革命",
+      "group": "world",
+      "note": "自由主義・民族主義運動の高揚",
+      "sources": [
+        "history"
+      ]
+    },
+    {
+      "year": 1868,
+      "title": "明治維新",
+      "group": "world",
+      "note": "日本で政治体制が大きく転換",
+      "sources": [
+        "history"
+      ]
+    },
+    {
+      "year": 1871,
+      "title": "ドイツ帝国成立",
+      "group": "world",
+      "note": "普仏戦争後、ドイツ統一",
+      "sources": [
+        "history"
+      ]
+    },
+    {
+      "year": 1914,
+      "title": "第一次世界大戦開戦",
+      "group": "world",
+      "note": "1914–1918年",
+      "sources": [
+        "history"
+      ]
+    },
+    {
+      "year": 1917,
+      "title": "ロシア革命",
+      "group": "world",
+      "note": "帝政が崩壊",
+      "sources": [
+        "history"
+      ]
+    },
+    {
+      "year": 1929,
+      "title": "世界恐慌",
+      "group": "world",
+      "note": "世界経済に長期的影響",
+      "sources": [
+        "history"
+      ]
+    },
+    {
+      "year": 1939,
+      "title": "第二次世界大戦開戦",
+      "group": "world",
+      "note": "1939–1945年",
+      "sources": [
+        "history"
+      ]
+    },
+    {
+      "year": 1945,
+      "title": "第二次世界大戦終結",
+      "group": "world",
+      "note": "戦後の政治・文化が再編",
+      "sources": [
+        "history"
+      ]
+    },
+    {
+      "year": 1969,
+      "title": "人類初の月面着陸",
+      "group": "world",
+      "note": "アポロ11号",
+      "sources": [
+        "history"
+      ]
+    },
+    {
+      "year": 1989,
+      "title": "ベルリンの壁崩壊",
+      "group": "world",
+      "note": "冷戦終結の象徴的出来事",
+      "sources": [
+        "history"
+      ]
+    },
+    {
+      "year": 1857,
+      "title": "音声波形の記録",
+      "group": "tech",
+      "note": "フォノトグラフ。記録はできるが当時は再生不可",
+      "sources": [
+        "npsorig"
+      ]
+    },
+    {
+      "year": 1877,
+      "title": "エジソンの蓄音機",
+      "group": "tech",
+      "note": "録音と再生が可能な装置",
+      "sources": [
+        "smith"
+      ]
+    },
+    {
+      "year": 1887,
+      "title": "円盤式蓄音機の特許",
+      "group": "tech",
+      "note": "ベルリナーによるグラモフォン",
+      "sources": [
+        "loc"
+      ]
+    },
+    {
+      "year": 1925,
+      "title": "電気録音の商業化",
+      "group": "tech",
+      "note": "マイク録音が普及し、収録帯域が拡大",
+      "sources": [
+        "loc"
+      ]
+    },
+    {
+      "year": 1935,
+      "title": "磁気テープ録音機",
+      "group": "tech",
+      "note": "マグネトフォンが公開",
+      "sources": [
+        "loc"
+      ]
+    },
+    {
+      "year": 1948,
+      "title": "LPレコード登場",
+      "group": "tech",
+      "note": "米Columbiaの33⅓回転盤",
+      "sources": [
+        "loc"
+      ]
+    },
+    {
+      "year": 1957,
+      "title": "商業ステレオLP",
+      "group": "tech",
+      "note": "米Audio Fidelityが発売、一般普及は1958年頃",
+      "sources": [
+        "loc"
+      ]
+    },
+    {
+      "year": 1963,
+      "title": "コンパクトカセット",
+      "group": "tech",
+      "note": "Philipsによる発表",
+      "sources": [
+        "loc"
+      ]
+    },
+    {
+      "year": 1982,
+      "title": "CD登場",
+      "group": "tech",
+      "note": "商業販売が始まる",
+      "sources": [
+        "loc"
+      ]
+    },
+    {
+      "year": 1889,
+      "title": "ブラームスの蝋管録音",
+      "group": "record",
+      "note": "1889年12月2日。音質は極度に悪い。自作《ハンガリー舞曲第1番》",
+      "sources": [
+        "nps"
+      ]
+    },
+    {
+      "year": 1890,
+      "title": "チャイコフスキーの声",
+      "group": "record",
+      "note": "蝋管に残る音楽家同士の会話。演奏音源ではありません",
+      "sources": [
+        "tchaik"
+      ]
+    },
+    {
+      "year": 1903,
+      "title": "ヨアヒムの録音",
+      "group": "record",
+      "note": "1903年8月。バッハ、ブラームスなど5面",
+      "sources": [
+        "joachim"
+      ]
+    },
+    {
+      "year": 1904,
+      "title": "サラサーテの録音",
+      "group": "record",
+      "note": "ヴァイオリン演奏が残る",
+      "sources": [
+        "nii"
+      ]
+    },
+    {
+      "year": 1911,
+      "title": "オデオンの交響曲全曲録音",
+      "group": "record",
+      "note": "1911年にベートーヴェン第5番・第6番などの全曲録音。ニキシュ盤より先行",
+      "sources": [
+        "earlySym"
+      ]
+    },
+    {
+      "year": 1913,
+      "title": "ニキシュの《運命》録音",
+      "group": "record",
+      "note": "ベルリン・フィルとの初期の交響曲全曲録音。史上最初の交響曲全曲録音ではありません",
+      "sources": [
+        "earlySym"
+      ]
+    },
+    {
+      "year": 1922,
+      "title": "メンゲルベルクの録音",
+      "group": "record",
+      "note": "ニューヨーク・フィルとの録音",
+      "sources": [
+        "meng"
+      ]
+    },
+    {
+      "year": 1928,
+      "title": "クライスラー × ラフマニノフ",
+      "group": "record",
+      "note": "ベートーヴェン、グリーグ、シューベルトのソナタを録音",
+      "sources": [
+        "naxos"
+      ]
+    }
+  ]
+};
+
+</script>
+  <script>
+(() => {
+  'use strict';
+  const data = window.TIMELINE_DATA;
+  if (!data) throw new Error('data.js が読み込まれていません');
+  const start = data.meta.start;
+  const end = data.meta.end;
+  const labelWidth = () => window.matchMedia('(max-width: 650px)').matches ? 158 : 232;
+  const roles = {
+    composer: {name:'作曲家',eng:'COMPOSERS',color:'var(--composer)'},
+    violin: {name:'ヴァイオリニスト',eng:'VIOLINISTS',color:'var(--violin)'},
+    piano: {name:'ピアニスト',eng:'PIANISTS',color:'var(--piano)'},
+    conductor: {name:'指揮者',eng:'CONDUCTORS',color:'var(--conductor)'}
+  };
+  const eventGroups = [
+    {id:'world',name:'世界史',sub:'WORLD HISTORY',color:'var(--world)'},
+    {id:'tech',name:'録音技術',sub:'RECORDING TECHNOLOGY',color:'var(--tech)'},
+    {id:'record',name:'歴史的な録音',sub:'HISTORIC RECORDINGS',color:'var(--record)'}
+  ];
+  const recordText = {none:'録音の掲載なし',audio:'音声録音あり',voice:'声の録音あり',roll:'ピアノロールあり'};
+  const sourceMap = new Map(data.sources.map(s=>[s.id,s]));
+  const peopleById = new Map(data.people.map(p=>[p.id,p]));
+  const worksByPerson = new Map(data.people.map(p=>[p.id, []]));
+  data.works.forEach((w,i)=>worksByPerson.get(w.person).push({...w,index:i}));
+  const scroller = document.getElementById('timelineScroller');
+  const root = document.getElementById('timelineRoot');
+  const dialog = document.getElementById('detailDialog');
+  const detailBody = document.getElementById('detailBody');  const searchInput = document.getElementById('searchInput');
+  const zoomRange = document.getElementById('zoomRange');
+  let px = Number(zoomRange.value);
+
+  document.getElementById('personCount').textContent = data.people.length;
+  document.getElementById('workCount').textContent = data.works.length;
+  document.getElementById('eventCount').textContent = data.events.length;
+  document.getElementById('sourcesList').innerHTML = data.sources.map(s=>
+    `<a href="${escapeAttr(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.title)}</a>`).join('');
+
+  function escapeHtml(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  function escapeAttr(v){return escapeHtml(v);}
+  function x(year){return (year-start)*px;}
+  function trackW(){return (end-start)*px + 16;}
+  function gridStyle(){return `background-size:${25*px}px 100%;background-position-x:${(Math.ceil(start/25)*25-start)*px}px;`;}
+  function preserveCenter(){return start+(scroller.scrollLeft+scroller.clientWidth/2-labelWidth())/px;}
+  function jumpTo(year){scroller.scrollLeft=Math.max(0,labelWidth()+x(year)-scroller.clientWidth/2);}
+
+  function axisHtml(){
+    let ticks='';
+    for(let year=Math.ceil(start/25)*25;year<=end;year+=25){
+      ticks+=`<div class="axis-tick ${year%100===0?'century':''}" style="left:${x(year)}px">${year}</div>`;
+    }
+    return `<div class="timeline-axis"><div class="axis-left">TIMELINE / YEAR</div><div class="axis-track" style="width:${trackW()}px">${ticks}</div></div>`;
+  }
+  function eventLaneHtml(group){
+    const evs=data.events.map((ev,index)=>({...ev,index})).filter(ev=>ev.group===group.id).sort((a,b)=>a.year-b.year);
+    const limits=[-Infinity,-Infinity,-Infinity];
+    let points='';
+    for(const ev of evs){
+      const xx=x(ev.year);
+      const width=Math.min(145, Math.max(62,ev.title.length*11+14));
+      // Three tracks for labels; all dots are still rendered when labels overlap.
+      let lane=limits.findIndex(limit=>xx>=limit+12);
+      if(lane===-1)lane=limits.indexOf(Math.min(...limits));
+      limits[lane]=xx+width;
+      const top=20+lane*24;
+      points+=`<button type="button" class="event-button" data-kind="event" data-index="${ev.index}" style="left:${xx}px;top:${top}px;width:14px;height:18px;--pin:${group.color}" title="${escapeAttr(ev.year+' '+ev.title)}" aria-label="${escapeAttr(ev.year+'年、'+ev.title)}"><span class="event-pin"></span><span class="event-title" style="width:${width}px">${escapeHtml(ev.title)}</span></button>`;
+    }
+    return `<div class="lane event-${group.id}"><div class="lane-label"><strong>${group.name}</strong><small>${group.sub}</small></div><div class="lane-track" style="width:${trackW()}px;height:105px;${gridStyle()}">${points}</div></div>`;
+  }
+  function personHtml(p){
+    const barColor=roles[p.role].color;
+    const from=Math.max(start,p.start), to=Math.min(end,p.end);
+    const works=worksByPerson.get(p.id)||[];
+    let dots=works.map(w=>`<button class="work-marker" type="button" data-kind="work" data-index="${w.index}" style="left:${x(w.year)}px" aria-label="${escapeAttr(w.year+'年 '+w.title+'（'+w.kind+'）')}" title="${escapeAttr(w.year+'年 '+w.title+'（'+w.kind+'）')}"></button>`).join('');
+    if(p.recordingYear && p.recordingYear>=start && p.recordingYear<=end){
+      dots+=`<button class="record-marker" type="button" data-kind="person" data-id="${escapeAttr(p.id)}" style="left:${x(p.recordingYear)}px" title="${escapeAttr(p.name+'：'+p.recordingYear+'年の記録')}" aria-label="${escapeAttr(p.recordingYear+'年、'+p.name+'の録音記録')}"></button>`;
+    }
+    const badge=p.recording==='audio'?'音':p.recording==='roll'?'巻':p.recording==='voice'?'声':'';
+    return `<div class="timeline-row" style="--bar:${barColor}">
+      <div class="person-label"><button type="button" data-kind="person" data-id="${escapeAttr(p.id)}" title="${escapeAttr(p.latin)}"><span class="person-label-name">${escapeHtml(p.name)}<span>${p.start}–${p.living?'現在':p.end}</span></span></button>${badge?`<span class="record-status ${p.recording==='audio'?'':p.recording}" title="${recordText[p.recording]}">${badge}</span>`:''}</div>
+      <div class="row-track" style="width:${trackW()}px;${gridStyle()}">
+       <button class="person-bar" type="button" data-kind="person" data-id="${escapeAttr(p.id)}" style="left:${x(from)}px;width:${Math.max(2,(to-from)*px)}px" aria-label="${escapeAttr(p.name+' '+p.start+'–'+p.end)}"></button>
+       <div class="life-birth" style="left:${x(from)}px"></div>${p.living?'':`<div class="life-death" style="left:${x(to)}px"></div>`}${dots}
+      </div></div>`;
+  }
+  function groupHtml(role,arr){
+    return `<div class="person-group" style="--bar:${roles[role].color}"><div class="group-title"><span class="group-badge"></span>${roles[role].name} / ${roles[role].eng} <span style="margin-left:auto;margin-right:15px;color:#9daeb6">${arr.length}</span></div><div class="group-track"></div></div>`+arr.map(personHtml).join('');
+  }
+  function render(centerYear=null){
+    if(centerYear==null)centerYear=preserveCenter();
+    const query=searchInput.value.trim().toLocaleLowerCase();
+    const selectedRoles=new Set([...document.querySelectorAll('#roleControls input:checked')].map(x=>x.value));
+    const recordedOnly=document.getElementById('recordedOnly').checked;
+    let visible=data.people.filter(p=>selectedRoles.has(p.role) && (!recordedOnly||p.recording!=='none'));
+    if(query)visible=visible.filter(p=>(p.name+' '+p.latin+' '+(worksByPerson.get(p.id)||[]).map(w=>w.title).join(' ')).toLocaleLowerCase().includes(query));
+    const byRole={};Object.keys(roles).forEach(r=>byRole[r]=visible.filter(p=>p.role===r).sort((a,b)=>a.start-b.start||a.end-b.end));
+    root.style.width=(labelWidth()+trackW())+'px';
+    root.innerHTML=axisHtml()+eventGroups.map(eventLaneHtml).join('')+
+      Object.keys(roles).filter(r=>byRole[r].length).map(r=>groupHtml(r,byRole[r])).join('')+
+      (!visible.length?'<div class="empty" style="padding:24px;color:#9facb1">該当する人物はいません。検索条件を変更してください。</div>':'');
+    document.getElementById('visibleCount').textContent=`${visible.length}人を表示 / 全${data.people.length}人 · 「音」音声、「巻」ロール、「声」声のみ`;
+    document.getElementById('zoomNumber').textContent=px+'×';
+    jumpTo(Math.max(start,Math.min(end,centerYear)));
+  }
+  function sourceLinks(ids){
+    const entries=(ids||[]).map(id=>sourceMap.get(id)).filter(Boolean);
+    return entries.length?`<div class="detail-citation"><strong>参考資料</strong>${entries.map(s=>`<a href="${escapeAttr(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.title)} ↗</a>`).join('')}</div>`:'';
+  }
+  function openDetail(kind,indexOrId){
+    let html='';
+    if(kind==='person'){
+      const p=peopleById.get(indexOrId);if(!p)return;
+      const ws=worksByPerson.get(p.id)||[];
+      const sourceIds=p.id==='brahms'?['nps','iasa']:p.id==='joachim'?['joachim']:p.id==='sarasate'||p.id==='ysaye'?['nii']:p.id==='kreisler'||p.id==='rach'?['naxos']:p.id==='meng'?['meng']:[];
+      html=`<div class="detail-kicker">${escapeHtml(roles[p.role].name)} / ${recordText[p.recording]}</div><h2 id="detailTitle">${escapeHtml(p.name)}</h2><p class="detail-years">${escapeHtml(p.latin)} · ${p.start}–${p.living?'現在（2026年時点）':p.end}</p><p>${escapeHtml(p.note||'代表的な音楽家。作品・録音史の中での位置づけを示しています。')}</p>${p.recordingYear?`<p><strong>掲載した録音の年：</strong>${p.recordingYear}年（必ずしも初録音年ではありません）</p>`:''}${ws.length?`<h3>掲載した代表作品</h3><ul class="detail-list">${ws.map(w=>`<li><button data-kind="work" data-index="${w.index}">${w.year}年 · ${escapeHtml(w.title)}（${escapeHtml(w.kind)}）</button></li>`).join('')}</ul>`:''}${sourceLinks(sourceIds)}`;
+    }else if(kind==='work'){
+      const w=data.works[Number(indexOrId)];if(!w)return;
+      const p=peopleById.get(w.person);
+      html=`<div class="detail-kicker">代表作品 / ${escapeHtml(w.kind)}</div><h2 id="detailTitle">${escapeHtml(w.title)}</h2><p class="detail-years">${w.year}年 · ${escapeHtml(p.name)}</p><p>${escapeHtml(w.note)}</p><p><strong>この年の意味：</strong>${escapeHtml(w.kind)}の年です。作曲・初演・出版の年は一致しない場合があります。</p>${sourceLinks(w.sources)}`;
+    }else if(kind==='event'){
+      const e=data.events[Number(indexOrId)];if(!e)return;
+      const g=eventGroups.find(g=>g.id===e.group);
+      html=`<div class="detail-kicker">${escapeHtml(g.name)} / ${e.year}</div><h2 id="detailTitle">${escapeHtml(e.title)}</h2><p class="detail-years">${e.year}年</p><p>${escapeHtml(e.note)}</p>${sourceLinks(e.sources)}`;
+    }
+    detailBody.innerHTML=html;
+    if(!dialog.open)dialog.showModal();
+  }
+
+  root.addEventListener('click',e=>{const el=e.target.closest('[data-kind]');if(!el)return;openDetail(el.dataset.kind,el.dataset.id??el.dataset.index);});
+  detailBody.addEventListener('click',e=>{const el=e.target.closest('[data-kind]');if(!el)return;openDetail(el.dataset.kind,el.dataset.id??el.dataset.index);});
+  document.querySelectorAll('[data-feature]').forEach(button=>button.addEventListener('click',()=>{
+    const yr=Number(button.dataset.feature);
+    jumpTo(yr);
+    const index=data.events.findIndex(e=>e.group==='record'&&e.year===yr);
+    if(index>=0)openDetail('event',index);
+  }));
+  document.querySelectorAll('[data-jump]').forEach(button=>button.addEventListener('click',()=>jumpTo(Number(button.dataset.jump))));
+  document.querySelectorAll('#roleControls input').forEach(input=>input.addEventListener('change',()=>render()));
+  document.getElementById('recordedOnly').addEventListener('change',()=>render());
+  searchInput.addEventListener('input',()=>render());
+  zoomRange.addEventListener('input',()=>{const center=preserveCenter();px=Number(zoomRange.value);render(center);});
+  const widthMedia=window.matchMedia('(max-width: 650px)');
+  widthMedia.addEventListener?.('change',()=>render());
+  render(1905);
+})();
+
+</script>
+</body>
+</html>
